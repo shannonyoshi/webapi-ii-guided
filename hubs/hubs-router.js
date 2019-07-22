@@ -78,8 +78,6 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// add an endpoint that returns all the messages for a hub
-
 couter.get("/:id/messages", async (req, res) => {
   const { id } = req.params;
   try {
@@ -115,9 +113,5 @@ function isValidMessage(message) {
   const { sender, text, hub_id } = message;
   return sender && text && hub_id;
 }
-
-// add an endpoint for adding new message to a hub
-
-// messages should have text & hub_id
 
 module.exports = router;

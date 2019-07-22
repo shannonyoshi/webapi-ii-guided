@@ -1,19 +1,17 @@
-const express = require('express');
+const express = require("express");
 
- const HubsRouter = require('./hubs/hubs-router');
+const HubsRouter = require("./hubs/hubs-router");
 
- const server = express();
+const server = express();
 
- server.use(express.json());
-server.use('/api/hubs', HubsRouter);
+server.use(express.json());
+server.use("/api/hubs", HubsRouter);
 
- server.get('/', (req, res) => {
+server.get("/", (req, res) => {
   res.send(`
     <h2>Lambda Hubs API</h>
     <p>Welcome to the Lambda Hubs API</p>
   `);
 });
 
-
-
- module.exports = server; 
+module.exports = server;
